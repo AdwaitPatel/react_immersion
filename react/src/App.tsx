@@ -22,10 +22,24 @@ function App(props) {
       <h1 style={{ marginTop: "300px" }}>{name}</h1>
       <h1>{props.add(34, 545)}</h1>
       <h2>Count : {count}</h2>
-      <button onClick={increment}>Increment</button>
+      <button onClick={() => {
+        increment();
+      }}>Increment</button>
       <Footer />
     </>
   ); 
+}
+
+export const Greet = () => {
+    const [greet, setGreet] = useState("");
+    return (
+    <>
+        <h1>{greet}</h1>
+        <input onChange={(e) => {
+            setGreet(`Hello ${e.target.value}`);
+        }} />
+    </>
+    )
 }
 
 export default App;
