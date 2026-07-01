@@ -2,7 +2,10 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
-import {Greet} from "./App.tsx";
+import {
+    Greet, 
+    Dashboard
+} from "./App.tsx";
 import RegistrationForm from "./components/RegistrationForm.tsx"
 
 const data = {
@@ -20,6 +23,9 @@ createRoot(document.getElementById("root")!).render(
     {/* <App data={data} add={add}/> */}
     {/* <App data={data} {...data} /> */}
     {/* <Greet /> */}
-    <RegistrationForm />
+    {/* <RegistrationForm /> */}
+
+    {/* Conditional Rendering */}
+    <Dashboard />
   </StrictMode>
 );
