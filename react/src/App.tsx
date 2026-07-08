@@ -2,6 +2,18 @@ import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home"
+
+export const Routing = () => {
+    return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 
 // conditional rendering
 export const Dashboard = () => {

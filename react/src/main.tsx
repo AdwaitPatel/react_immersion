@@ -1,21 +1,21 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.tsx";
-import {
-    Greet, 
-    Dashboard
-} from "./App.tsx";
-import RegistrationForm from "./components/RegistrationForm.tsx"
 
-const data = {
-  name: "Adwait Patel",
-  headerName: "GLA Section PRF A"
-};
+// import App from "./App.tsx";
+// import { Greet, Dashboard } from "./App.tsx";
+// import RegistrationForm from "./components/RegistrationForm.tsx";
 
-function add (a, b) {
-    return a+b
-}
+// const data = {
+//   name: "Adwait Patel",
+//   headerName: "GLA Section PRF A",
+// };
+
+// function add(a, b) {
+//   return a + b;
+// }
+
+import App from "./App2.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -26,6 +26,9 @@ createRoot(document.getElementById("root")!).render(
     {/* <RegistrationForm /> */}
 
     {/* Conditional Rendering */}
-    <Dashboard />
-  </StrictMode>
+    {/* <Dashboard /> */}
+
+    {/* Routing */}
+    <App />
+  </StrictMode>,
 );
