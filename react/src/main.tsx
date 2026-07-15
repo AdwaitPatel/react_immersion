@@ -15,7 +15,30 @@ import "./index.css";
 //   return a + b;
 // }
 
-import App from "./App2.tsx";
+// import App from "./App2.tsx";
+import App from "./App3.tsx";
+import ContextDemo from "./components/ContextDemo.tsx";
+import { UserProvider } from "./components/UserContext.tsx";
+
+
+import { createContext, useState } from "react";
+
+export const ThemeContext = createContext();
+
+export function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+}
+
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -29,6 +52,20 @@ createRoot(document.getElementById("root")!).render(
     {/* <Dashboard /> */}
 
     {/* Routing */}
-    <App />
+    {/* <App /> */}
+
+
+    {/* Context */}
+    <ThemeProvider>
+      {/* <ContextDemo /> */}
+      <App />
+    </ThemeProvider>
+
+
+
+
   </StrictMode>,
 );
+
+
+
