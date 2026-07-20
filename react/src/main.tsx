@@ -16,29 +16,31 @@ import "./index.css";
 // }
 
 // import App from "./App2.tsx";
-import App from "./App3.tsx";
-import ContextDemo from "./components/ContextDemo.tsx";
-import { UserProvider } from "./components/UserContext.tsx";
+// import App from "./App3.tsx";
+// import ContextDemo from "./components/ContextDemo.tsx";
+// import { UserProvider } from "./components/UserContext.tsx";
 
 
-import { createContext, useState } from "react";
+// import { createContext, useState } from "react";
 
-export const ThemeContext = createContext();
+// export const ThemeContext = createContext();
 
-export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState("light");
+// export function ThemeProvider({ children }) {
+//   const [theme, setTheme] = useState("light");
 
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
+//   const toggleTheme = () => {
+//     setTheme(theme === "light" ? "dark" : "light");
+//   };
 
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
-}
+//   return (
+//     <ThemeContext.Provider value={{ theme, toggleTheme }}>
+//       {children}
+//     </ThemeContext.Provider>
+//   );
+// }
 
+
+import App from "./App4";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -56,10 +58,12 @@ createRoot(document.getElementById("root")!).render(
 
 
     {/* Context */}
-    <ThemeProvider>
+    {/* <ThemeProvider> */}
       {/* <ContextDemo /> */}
-      <App />
-    </ThemeProvider>
+      {/* <App />
+    </ThemeProvider> */}
+
+    <App />
 
 
 
